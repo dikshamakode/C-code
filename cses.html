@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,i;
+	cin>>n;
+	for(int j=0;j<(pow(2,n));j++)
+	{
+		i=j;
+		i=i^(i>>1);
+		string a=bitset<50>(i).to_string();
+		a.erase(0,50-n);
+		cout<<a<<endl;
+	}
+
+	return 0;
+}
