@@ -1,33 +1,44 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Employee{
-    int count;
+class Employee
+{
+    static int count;
     int id;
-    public:
-        void setData(void){
-            cout<<"Enter the id"<<endl;
-            cin>>id;
-        }
-        void getData(void){
-            cout<<"The id of this employee is" << id;
-        }
 
-
+public:
+    void setData(void)
+    {
+        cout << "Enter the id" << endl;
+        cin >> id;
+        count++;
+    }
+    void getData(void)
+    {
+        cout << "The id of this employee is" << id << " and this is employee number" << count << endl;
+    }
+    static void getCount(void){
+        cout<<"the value of count is "<<count<<endl;
+    }
 };
-
-int main(){
-    Employee harry,rohan,lavish;
-    //harry.id = 1;
-    //harry.count = 1; we cannat do this as id and count are private
-    harry.setData(); 
+// count is the static data member of class Employee
+int Employee::count; // default value
+int main()
+{//ni chal raha 
+    Employee harry, rohan, lavish;
+    // harry.id = 1;
+    // harry.count = 1; we cannat do this1 as id and count are private
+    harry.setData();
     harry.getData();
-
-    rohan.setData(); 
+    Employee::getCount();
+    
+    rohan.setData();
     rohan.getData();
+    Employee::getCount();
 
-    lavish.setData(); 
-    lavish.getData();   
+    lavish.setData();
+    lavish.getData();
+    Employee::getCount();
 
     return 0;
 }
