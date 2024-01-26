@@ -6,6 +6,7 @@ Class X{
         void setValue(int value){
             data = value;
         }
+    friend void add(X, Y);
 
 };
 class Y{
@@ -14,12 +15,15 @@ class Y{
         void setValue(int value){
             num = value;
         }
+    friend void add(X, Y);
 };
 
 void add(X o1, Y o2){
-    cout<<"Summing dates of X nd Y object gives me"<< o1.data + o2.data;
+    cout<<"Summing dates of X nd Y object gives me"<< o1.data + o2.num;
 }
 int main(){
+    X a;
+    
 
     return 0;
 }
