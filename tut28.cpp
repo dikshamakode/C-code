@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
-Class X{
+
+class Y;
+
+class X{
     int data;
     public:
         void setValue(int value){
@@ -10,7 +13,7 @@ Class X{
 
 };
 class Y{
-    int data;
+    int num;
     public:
         void setValue(int value){
             num = value;
@@ -22,9 +25,14 @@ void add(X o1, Y o2){
     cout<<"Summing dates of X nd Y object gives me"<< o1.data + o2.num;
 }
 int main(){
-    X a;
-    
+    X a1;
+    a1.setValue(3);
 
+    Y b1;
+    b1.setValue(15);
+
+    add(a1, b1);
     return 0;
+
 }
 //3.35
