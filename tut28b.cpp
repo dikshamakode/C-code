@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+class c2;
     class c1{
         int val1;
         public:
