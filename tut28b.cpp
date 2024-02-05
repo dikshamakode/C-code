@@ -38,7 +38,9 @@ int main(){
     oc1.indata(34);
     oc2.indata(34);
     exchange(oc1, oc2);
-    cout<<" the value of c1 after exchangingbecome: "<<oc1.display();
-    cout<<" the value of c2 after exchangingbecome: "<<oc2.display();
+    cout<<" the value of c1 after exchanging become: ";
+    oc1.display();
+    cout<<" the value of c2 after exchanging become: ";
+    oc2.display();
     return 0;
 }
