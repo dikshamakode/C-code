@@ -17,8 +17,9 @@ class Complex{
 };
 
 Complex ::Complex(void){ // --->this is default constructor
-    a = 10;
-    b = 20;
+    a = 0;
+    b = 0;
+    cout<<"helloworld";
 }
 int main(){
     Complex c;
@@ -28,5 +29,9 @@ int main(){
 
     return 0;
 }
-// Properties of constructors
-1 I 
+// Characterstics of constructors
+//1 It  should be declare in the public section of the class 
+//2 they are automatically invoke wherever the object is created 
+//3 they cant return values and do not have return type.
+//4 it can have default argument 
+//5 we cant refer to the address 
