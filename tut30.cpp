@@ -18,8 +18,14 @@ Complex ::Complex(int x,int y){ // ---> This is parameterized construc
 }
 
 int main(){
-    Complex a;
+    //implicit call
+    Complex a(4 ,6);
+
+
+    //explicit call
+    Complex b = Complex(5, 7);
     a.printNumber();
+    b.printNumber();
     return 0;
 
 }
